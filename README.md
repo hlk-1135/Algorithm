@@ -6,10 +6,11 @@
 ####**学习书籍：**
 《计算机算法设计与分析》(第4版)_C++语言描述
 《数据结构与算法分析》_Java语言描述(第2版)
+《剑指Offer》
+
 ####**刷题网站：**
 [杭电acm](http://acm.hdu.edu.cn/)
     and   [LeetCode](https://leetcode.com/problemset/algorithms/)
-    and   《剑指Offer》
 
 **如果觉得不错，请先在这个仓库上点个 star 吧，这也是对我的肯定和鼓励！**
 
