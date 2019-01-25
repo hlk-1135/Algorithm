@@ -5,27 +5,32 @@ int a[1001];
 using namespace std;
 int main()
 {
-	int i,n;
+	int i,j,k,n;
+	int num1,num2;
 	while(~scanf("%d",&n)) {
-		for(i=1;i<=n;i++) {
+		for(i=0;i<n;i++) {
 			scanf("%d",&a[i]);
 		}
-		sort(a+1,a+n+1);
-		int mid=(n+1)/2;
-		if(n%2) {
-			if(a[mid]==a[mid-1] && a[mid]==a[mid+1])
-				printf("%d\n",a[mid]);
-			else if(a[mid]!=a[mid-1] && a[mid]!=a[mid+1])
-				printf("%d\n",a[mid]);
-			else
-				printf("-1\n");
-		} else { 
-			//ÓÐÎÊÌâ125556
-			if(a[mid]!=a[mid+1])
-				printf("-1\n");
-			else
-				printf("%d\n",a[mid]);
+		sort(a,a+n);
+		bool flag=false;
+		for(i=0;i<n;i++) {
+			num1=num2=0;
+			for(j=0;j<i;j++) {
+				if(a[j]<a[i])
+					num1++;
+			}
+			for(k=i+1;k<n;k++) {
+				if(a[k]>a[i])
+					num2++;	
+			}
+			if(num1 == num2) {
+				flag=true;
+				printf("%d\n",a[i]);
+				break;
+			}
 		}
+		if(!flag)
+			printf("-1\n");
 	}
 	return 0;
 }
